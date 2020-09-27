@@ -1,10 +1,5 @@
 class ForumsController < ApplicationController
 
-  def index
-    forums = Forum.all
-    render json: forums
-  end
-
   def create
     forum = Forum.new(forum_params)
     if forum.save
